@@ -84,8 +84,8 @@ public class SoloViewPager extends FrameLayout {
         float heightFall = pageTransFormer.getHeightFall();
         float translationX = pageTransFormer.getTranslationX();
         float pathStartY = heightFall + 0.5f * measuredHeight;
-        path.moveTo(-translationX, pathStartY);
-        path.quadTo(measuredWidth / 2, measuredHeight, measuredWidth + translationX, pathStartY);
+        path.moveTo(translationX/2, pathStartY);
+        path.quadTo(measuredWidth / 2, measuredHeight, measuredWidth-translationX/2 , pathStartY);
         return path;
     }
 
